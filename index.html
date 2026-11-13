@@ -6,7 +6,7 @@
     <title>Marlon Morales | Asesorías y Consultorías en Datos, Procesos y Calidad</title>
     <meta name="description" content="Transforme sus procesos en activos, sus auditorías en oportunidades y sus datos en inteligencia de negocio. Diagnóstico Organizacional gratuito.">
     <!-- Favicon Personalizado -->
-    <link rel="icon" type="image/x-icon" href="Logo Dato mata Relato - FAVICON.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -28,9 +28,9 @@
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo y Marca (Punto 1) -->
+                <!-- Logo y Marca -->
                 <div class="flex items-center space-x-3">
-                    <img src="Logo Dato mata Relato.png" alt="Dato, Mata Relato" class="w-10 h-10 object-contain">
+                    <img src="logo.png" alt="Dato, Mata Relato" class="w-10 h-10 object-contain">
                     <div>
                         <span class="font-bold text-slate-900 block leading-none">Marlon Morales</span>
                         <span class="text-[11px] font-semibold text-blue-600 tracking-wider uppercase">Dato, Mata Relato</span>
@@ -76,9 +76,9 @@
             </div>
             <div class="md:col-span-5">
                 <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 space-y-5 shadow-2xl">
-                    <!-- Foto de Perfil y Nombre (Punto 2) -->
+                    <!-- Foto de Perfil -->
                     <div class="flex items-center space-x-4 border-b border-white/10 pb-4">
-                        <img src="Perfil - LinkedIn - Marlon Morales.jpg" alt="Marlon Morales" class="w-14 h-14 rounded-full object-cover border-2 border-sky-400 shadow-md">
+                        <img src="perfil.jpg" alt="Marlon Morales" class="w-14 h-14 rounded-full object-cover border-2 border-sky-400 shadow-md">
                         <div>
                             <h2 class="font-bold text-lg text-white">Marlon Mauricio Morales A.</h2>
                             <p class="text-xs text-sky-300">Analista de Datos • Auditor Interno HSEQ</p>
@@ -461,7 +461,6 @@
             const recTexto = document.getElementById('recomendacion-texto');
             const btnWa = document.getElementById('btn-whatsapp-resultado');
 
-            // Actualizar contadores
             puntajeTexto.textContent = porcentaje + '%';
             barra.style.width = porcentaje + '%';
             document.getElementById('score-procesos').textContent = procesos + '/3';
@@ -490,11 +489,9 @@
 
             titulo.textContent = nivelNombre;
 
-            // Configurar enlace dinámico de WhatsApp con los resultados del cliente
             mensajeWa = `Hola Marlon, realicé el *Diagnóstico Organizacional* en tu web y obtuve un *${porcentaje}% (${nivelNombre})*. Mis resultados fueron: Procesos (${procesos}/3), Calidad (${calidad}/3) y Datos (${datos}/3). Me gustaría conversar sobre cómo mejorar estos indicadores.`;
             btnWa.href = `https://wa.me/573133388156?text=${encodeURIComponent(mensajeWa)}`;
 
-            // Mostrar panel y hacer scroll suave hacia él
             panel.classList.remove('hidden');
             panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
