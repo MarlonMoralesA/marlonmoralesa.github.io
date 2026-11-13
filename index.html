@@ -76,12 +76,15 @@
             </div>
             <div class="md:col-span-5">
                 <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 space-y-5 shadow-2xl">
-                    <!-- Foto de Perfil con blindaje ante errores de mayúsculas/extensiones -->
+                    <!-- Foto de perfil: guardar la imagen como perfil.jpg junto a este archivo HTML -->
                     <div class="flex items-center space-x-4 border-b border-white/10 pb-4">
-                        <img src="perfil.jpg" 
-                             onerror="this.onerror=null; this.src='perfil.JPG';" 
-                             alt="Marlon Morales" 
-                             class="w-20 h-20 rounded-full object-cover border-2 border-sky-400 shadow-md flex-shrink-0 bg-slate-800">
+                        <img
+                            src="./perfil.jpg"
+                            alt="Fotografía de perfil de Marlon Morales"
+                            class="w-20 h-20 rounded-full object-cover border-2 border-sky-400 shadow-md flex-shrink-0 bg-slate-800"
+                            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.profile-fallback').classList.remove('hidden');"
+                        >
+                        <div class="hidden profile-fallback w-20 h-20 rounded-full border-2 border-sky-400 bg-slate-800 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">MM</div>
                         <div>
                             <h2 class="font-bold text-lg text-white leading-snug">Marlon Mauricio Morales A.</h2>
                             <p class="text-xs text-sky-300">Analista de Datos • Auditor Interno HSEQ</p>
