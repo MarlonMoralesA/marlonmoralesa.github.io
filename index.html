@@ -28,7 +28,7 @@
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo Aún Más Grande -->
+                <!-- Logo Más Grande y Visible -->
                 <div class="flex items-center space-x-3 py-2">
                     <img src="logo.png" alt="Dato, Mata Relato" class="h-16 w-auto object-contain">
                     <div>
@@ -40,6 +40,7 @@
                     <a href="#enfoque" class="hover:text-blue-600 transition">Enfoque</a>
                     <a href="#diagnostico" class="text-blue-600 font-semibold hover:text-blue-800 transition">Diagnóstico Gratis</a>
                     <a href="#servicios" class="hover:text-blue-600 transition">Servicios</a>
+                    <a href="#testimonios" class="hover:text-blue-600 transition">Testimonios</a>
                     <a href="#perfil" class="hover:text-blue-600 transition">Sobre Mí</a>
                 </div>
                 <a href="#diagnostico" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow transition">
@@ -76,15 +77,12 @@
             </div>
             <div class="md:col-span-5">
                 <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 space-y-5 shadow-2xl">
-                    <!-- Foto de perfil: guardar la imagen como perfil.jpg junto a este archivo HTML -->
+                    <!-- Foto de Perfil con blindaje ante errores de mayúsculas/extensiones -->
                     <div class="flex items-center space-x-4 border-b border-white/10 pb-4">
-                        <img
-                            src="./perfil.jpg"
-                            alt="Fotografía de perfil de Marlon Morales"
-                            class="w-20 h-20 rounded-full object-cover border-2 border-sky-400 shadow-md flex-shrink-0 bg-slate-800"
-                            onerror="this.style.display='none'; this.nextElementSibling.querySelector('.profile-fallback').classList.remove('hidden');"
-                        >
-                        <div class="hidden profile-fallback w-20 h-20 rounded-full border-2 border-sky-400 bg-slate-800 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">MM</div>
+                        <img src="perfil.jpg" 
+                             onerror="this.onerror=null; this.src='perfil.JPG';" 
+                             alt="Marlon Morales" 
+                             class="w-20 h-20 rounded-full object-cover border-2 border-sky-400 shadow-md flex-shrink-0 bg-slate-800">
                         <div>
                             <h2 class="font-bold text-lg text-white leading-snug">Marlon Mauricio Morales A.</h2>
                             <p class="text-xs text-sky-300">Analista de Datos • Auditor Interno HSEQ</p>
@@ -371,8 +369,36 @@
         </div>
     </section>
 
-    <!-- Perfil y Formación -->
-    <section id="perfil" class="py-16 px-4 bg-white border-t border-slate-200">
+    <!-- SECCIÓN DE TESTIMONIOS Y VALIDACIÓN EN LINKEDIN (Optimizada para validación real) -->
+    <section id="testimonios" class="py-16 px-4 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Autoridad Profesional</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Valide mis recomendaciones y trayectoria en vivo</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">La mejor prueba de un servicio de consultoría es la opinión transparente de colegas, líderes y clientes en redes profesionales.</p>
+            </div>
+
+            <!-- Tarjeta Interactiva con enlace a LinkedIn -->
+            <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200 max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6 text-left">
+                <div class="w-16 h-16 rounded-2xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center text-3xl flex-shrink-0">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="space-y-2 flex-grow">
+                    <h3 class="font-bold text-slate-900 text-lg">Recomendaciones y Reseñas en LinkedIn</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Conozca de primera mano lo que opinan directores y gerentes sobre los proyectos de analítica de datos, auditorías HSEQ y documentación de procesos.
+                    </p>
+                </div>
+                <a href="https://www.linkedin.com/in/marlonmoralesa/details/recommendations/" target="_blank" class="whitespace-nowrap bg-[#0A66C2] hover:bg-[#094d92] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow transition flex items-center gap-2">
+                    <span>Ver en LinkedIn</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ Y FORMACIÓN -->
+    <section id="perfil" class="py-16 px-4 bg-white border-t border-slate-200 scroll-mt-28">
         <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 items-start">
             <div class="md:col-span-5 space-y-4">
                 <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Respaldo Profesional</span>
